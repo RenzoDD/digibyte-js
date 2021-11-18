@@ -139,21 +139,24 @@ function removeNetwork(network) {
 addNetwork({
   name: 'livenet',
   alias: 'mainnet',
-  pubkeyhash: 0x00,
-  privatekey: 0x80,
-  scripthash: 0x05,
-  bech32prefix: 'bc',
-  xpubkey: 0x0488b21e,
-  xprivkey: 0x0488ade4,
-  networkMagic: 0xf9beb4d9,
-  port: 8333,
-  dnsSeeds: [
-    'seed.bitcoin.sipa.be',
-    'dnsseed.bluematt.me',
-    'dnsseed.bitcoin.dashjr.org',
-    'seed.bitcoinstats.com',
-    'seed.bitnodes.io',
-    'bitseed.xf2.org'
+  pubkeyhash: 0x1E,         // PUBKEY_ADDRESS
+  privatekey: 0x80,         // SECRET_KEY
+  scripthash: 0x3F,         // SCRIPT_ADDRESS
+  bech32prefix: 'dgb',      // bech32_hrp
+  xpubkey: 0x0488B21E,      // EXT_PUBLIC_KEY
+  xprivkey: 0x0488ADE4,     // EXT_SECRET_KEY
+  networkMagic: 0xFAC3B6DA, // pchMessageStart
+  port: 12024,              // nDefaultPort
+  dnsSeeds: [               // vSeeds
+    'seed.digibyte.org',
+    'seed.digibyte.io',
+    'seed.digihash.co',
+    'dnsseed.esotericizm.site',
+    'seed.digibytefoundation.org',
+    'seed.digiexplorer.info',
+    'seed.digiassets.net',
+    'digibyteblockexplorer.com',
+    'dgb1.trezor.io'
   ]
 });
 
@@ -166,19 +169,17 @@ var livenet = get('livenet');
 addNetwork({
   name: 'testnet',
   alias: 'test',
-  pubkeyhash: 0x6f,
-  privatekey: 0xef,
-  scripthash: 0xc4,
-  bech32prefix: 'tb',
-  xpubkey: 0x043587cf,
-  xprivkey: 0x04358394,
-  networkMagic: 0x0b110907,
-  port: 18333,
-  dnsSeeds: [
-    'testnet-seed.bitcoin.petertodd.org',
-    'testnet-seed.bluematt.me',
-    'testnet-seed.alexykot.me',
-    'testnet-seed.bitcoin.schildbach.de'
+  pubkeyhash: 0x7E,         // PUBKEY_ADDRESS
+  privatekey: 0xFE,         // SECRET_KEY
+  scripthash: 0x8C,         // SCRIPT_ADDRESS
+  bech32prefix: 'dgbt',     // bech32_hrp
+  xpubkey: 0x043587CF,      // EXT_PUBLIC_KEY
+  xprivkey: 0x04358394,     // EXT_SECRET_KEY
+  networkMagic: 0xFDC8BDDD, // pchMessageStart
+  port: 12026,              // nDefaultPort
+  dnsSeeds: [               // vSeeds
+    'seed.testnet-1.us.digibyteservers.io',
+    'seed.testnetexplorer.digibyteservers.io'
   ]
 });
 
@@ -191,15 +192,15 @@ var testnet = get('testnet');
 addNetwork({
   name: 'regtest',
   alias: 'dev',
-  pubkeyhash: 0x6f,
-  privatekey: 0xef,
-  scripthash: 0xc4,
-  bech32prefix: 'bcrt',
-  xpubkey: 0x043587cf,
-  xprivkey: 0x04358394,
-  networkMagic: 0xfabfb5da,
-  port: 18444,
-  dnsSeeds: []
+  pubkeyhash: 0x7E,         // PUBKEY_ADDRESS
+  privatekey: 0xFE,         // SECRET_KEY
+  scripthash: 0x8C,         // SCRIPT_ADDRESS
+  bech32prefix: 'dgbrt',    // bech32_hrp
+  xpubkey: 0x043587CF,      // EXT_PUBLIC_KEY
+  xprivkey: 0x04358394,     // EXT_SECRET_KEY
+  networkMagic: 0xFABFB5DA, // pchMessageStart
+  port: 18444,              // nDefaultPort
+  dnsSeeds: []              // vSeeds
 });
 
 /**
