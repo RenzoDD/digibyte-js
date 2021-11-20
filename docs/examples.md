@@ -1,11 +1,19 @@
-# Bitcore examples
+# DigiByte examples
 
 ## Generate a random address
 
 ```javascript
-var privateKey = new bitcore.PrivateKey();
+var privateKey = new digibyte.PrivateKey();
 
+// Legacy address 'D...'
 var address = privateKey.toAddress();
+var address = privateKey.toAddress('legacy');
+
+// Segwit address 'dgb1...'
+var address = privateKey.toAddress('segwit');
+
+// Segwit native address 'S...'
+var address = privateKey.toAddress('native');
 ```
 
 ## Generate a address from a SHA256 hash
