@@ -28,46 +28,34 @@ You can find all the documentation [here](https://github.com/RenzoDD/digibyte-js
 - [Create a 2-of-3 multisig P2SH address](docs/examples.md#create-a-2-of-3-multisig-p2sh-address)
 - [Spend from a 2-of-2 multisig P2SH address](docs/examples.md#spend-from-a-2-of-2-multisig-p2sh-address)
 
-## Building the Browser Bundle
-
-To build a bitcore-lib full bundle for the browser:
+## Development
 
 ```sh
-gulp browser
-```
-
-This will generate files named `bitcore-lib.js` and `bitcore-lib.min.js`.
-
-You can also use our pre-generated files, provided for each release along with a PGP signature by one of the project's maintainers. To get them, checkout the [releases](https://github.com/bitpay/bitcore/blob/master/packages/bitcore-lib/CHANGELOG.md).
-
-## Development & Tests
-
-```sh
-git clone https://github.com/bitpay/bitcore-lib
-cd bitcore-lib
+git clone https://github.com/RenzoDD/digibyte-js
+cd digibyte-js/src
 npm install
 ```
 
-Run all the tests:
+## Building the Browser Bundle
+
+To build a digibyte-js full bundle for the browser:
 
 ```sh
-gulp test
+npm install -g browserify
+npm run build
 ```
 
-You can also run just the Node.js tests with `gulp test:node`, just the browser tests with `gulp test:browser` or create a test coverage report (you can open `coverage/lcov-report/index.html` to visualize it) with `gulp coverage`.
+This will generate a file named `digibyte.js`.
 
 ## Security
 
-We're using Bitcore in production, as are many others, but please use common sense when doing anything related to finances! We take no responsibility for your implementation decisions.
+We're using DigiByte JS in production, as are many others, but please use common sense when doing anything related to finances! We take no responsibility for your implementation decisions.
 
-If you find a security issue, please email security@bitpay.com.
-
-## Contributing
-
-See [CONTRIBUTING.md](https://github.com/bitpay/bitcore/blob/master/Contributing.md) on the main bitcore repo for information about how to contribute.
+Projects using DigiByte JS:
+* [DigiFaucet](https://www.digifaucet.org/)
 
 ## License
 
-Code released under [the MIT license](https://github.com/bitpay/bitcore/blob/master/LICENSE).
+Code released under the [MIT License](./LICENSE).
 
 Copyright 2013-2019 BitPay, Inc. Bitcore is a trademark maintained by BitPay, Inc.

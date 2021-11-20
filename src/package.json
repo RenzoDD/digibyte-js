@@ -26,7 +26,8 @@
     "url": "https://github.com/RenzoDD/digibyte-js"
   },
   "scripts": {
-    "test": "cls && node test.js"
+    "test": "cls && node test.js",
+    "build": "cls && browserify -r ./index.js:digibyte-js -o ./digibyte.js"
   },
   "version": "0.0.2"
 }
