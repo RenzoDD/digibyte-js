@@ -1,5 +1,8 @@
 # DigiByte JS
 
+[![NPM Package](https://img.shields.io/badge/npm-0.0.3-blue)](https://www.npmjs.com/package/digibyte-js)
+![Develop Status](https://img.shields.io/badge/satus-develop-orange)
+
 **A pure and powerful JavaScript DigiByte library** forked from Bitpay's [Bitcore Lib](https://github.com/bitpay/bitcore/tree/master/packages/bitcore-lib) library.
 
 DigiByte is a powerful peer-to-peer platform for the next generation of financial technology. The decentralized nature and the speed of the DigiByte network allows for highly resilient software infrastructure, and the developer community needs reliable, open-source tools to implement DigiByte apps and services.
