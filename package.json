@@ -1,0 +1,33 @@
+{
+  "name": "digibyte-js",
+  "main": "index.js",
+  "description": "A pure and powerful JavaScript DigiByte library.",
+  "author": {
+    "name": "Renzo Diaz",
+    "email": "renzo.diaz@remadi.net"
+  },
+  "dependencies": {
+    "bech32": "=1.1.3",
+    "bn.js": "=4.11.8",
+    "bs58": "^4.0.1",
+    "buffer-compare": "=1.1.1",
+    "elliptic": "^6.5.3",
+    "inherits": "=2.0.1",
+    "lodash": "^4.17.20"
+  },
+  "keywords": [
+    "digibyte",
+    "blockchain",
+    "cryptocurrencies"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RenzoDD/digibyte-js"
+  },
+  "scripts": {
+    "test": "cls && node test.js",
+    "build": "cls && browserify -r ./index.js:digibyte-js -o ./digibyte.js"
+  },
+  "version": "0.1.0"
+}
