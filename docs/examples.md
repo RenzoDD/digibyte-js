@@ -6,14 +6,14 @@
 var privateKey = new digibyte.PrivateKey();
 
 // Legacy address 'D...'
-var address = privateKey.toAddress();
-var address = privateKey.toAddress('legacy');
+var legacy = privateKey.toAddress();
+var legacy = privateKey.toAddress('legacy');
 
 // Segwit address 'dgb1...'
-var address = privateKey.toAddress('segwit');
+var segwit = privateKey.toAddress('segwit');
 
 // Segwit native address 'S...'
-var address = privateKey.toAddress('native');
+var native = privateKey.toAddress('native');
 ```
 
 ## Generate a address from a SHA256 hash
@@ -65,9 +65,9 @@ var signature = message.sign(privateKey);
 
 ```javascript
 var address = 'D7SxeTzUMjpwyqrv6iLNvbEiZkK19ANVss';
-var signature = 'IBOvIfsAs/da1e36W8kw1cQOPqPVXCW5zJgNQ5kI8m57FycZXdeFmeyoIqJSREzE4W7vfDmdmPk0HokuJPvgPPE=';
+var signature = 'IO1ssZYzvZOgadCkPKQEIe6ux086r3/llF7Y8gWhxPxTZY7LmrOuSh3NaTttRKfnDovTGvpBnDoeAtJaAi0m5/0=';
 
-var verified = new Message('This is an example of a signed message.').verify(address, signature);
+var verified = new digibyte.Message('This is an example of a signed message.').verify(address, signature);
  ```
 
 ## Create an OP RETURN transaction
