@@ -34,7 +34,7 @@ You can find all the documentation [here](https://github.com/RenzoDD/digibyte-js
 
 Last modifications to the packages since v1.0.0
 
-- Added BIP39 support for Mnemonic phrases
+- [Added BIP39 support for Mnemonic phrases](docs/mnemonic.md)
 
 ## Development 🛠️
 
