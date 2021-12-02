@@ -10,6 +10,7 @@ To get started, just type `npm install digibyte-js`.
 
 ### Addresses and Key Management
 
+- [BIP39 Mnemonic](mnemonic.md)
 - [Addresses](address.md)
 - [Using Different Networks](networks.md)
 - [Private Keys](privatekey.md) and [Public Keys](publickey.md)
