@@ -21,10 +21,11 @@ You can find all the documentation [here](https://github.com/RenzoDD/digibyte-js
 
 - [Generate a random address](docs/examples.md#generate-a-random-address)
 - [Generate a address from a SHA256 hash](docs/examples.md#generate-a-address-from-a-sha256-hash)
+- [Generate a random mnemonic](docs/examples.md#generate-address-from-mnemonic)
 - [Import an address via WIF](docs/examples.md#import-an-address-via-wif)
 - [Create a Transaction](docs/examples.md#create-a-transaction)
-- [Sign a Bitcoin message](docs/examples.md#sign-a-digibyte-message)
-- [Verify a Bitcoin message](docs/examples.md#verify-a-digibyte-message)
+- [Sign a DigiByte message](docs/examples.md#sign-a-digibyte-message)
+- [Verify a DigiByte message](docs/examples.md#verify-a-digibyte-message)
 - [Create an OP RETURN transaction](docs/examples.md#create-an-op-return-transaction)
 - [Create a 2-of-3 multisig P2SH address](docs/examples.md#create-a-2-of-3-multisig-p2sh-address)
 - [Spend from a 2-of-2 multisig P2SH address](docs/examples.md#spend-from-a-2-of-2-multisig-p2sh-address)

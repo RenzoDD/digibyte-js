@@ -19,7 +19,7 @@ To get started, just type `npm install digibyte-js`.
 ### Payment Handling
 
 - [Using Different Units](unit.md)
-- [Acknowledging and Requesting Payments: Bitcoin URIs](uri.md)
+- [Acknowledging and Requesting Payments: DigiByte URIs](uri.md)
 - [The Transaction Class](transaction.md)
 
 ### DigiByte Internals

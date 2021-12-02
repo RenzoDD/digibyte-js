@@ -30,7 +30,7 @@ Evaluate a string and returns `true` if its a valid BIP39 mnemonic if not, it wi
 var mnemonic = 'hockey lumber soda negative link evolve pole retreat sponsor voice hurt feature';
 
 if (BIP39.CheckMnemonic(mnemonic)) {
-	// TODO
+    // TODO
 }
 ```
 
@@ -48,4 +48,5 @@ var HD = HDPrivateKey.fromSeed(seed);
 var derived = HD.derive("m/44'/20'/0'/0/0");
 
 var address = derived.privateKey.toAddress();
+// DJPa3v2MZTGy19e3QmnbkxdML1Y4nNy1eQ
 ```
