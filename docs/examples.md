@@ -31,10 +31,10 @@ var address = new digibyte.PrivateKey(bn).toAddress();
 ```javascript
 var mnemonic = 'hockey lumber soda negative link evolve pole retreat sponsor voice hurt feature';
 
-var seed = BIP39.MnemonicToSeed(mnemonic);
+var seed = digibyte.BIP39.MnemonicToSeed(mnemonic);
 
 // Then folow the BIP32 Hierarchical Deterministic Wallet 
-var HD = HDPrivateKey.fromSeed(seed);
+var HD = digibyte.HDPrivateKey.fromSeed(seed);
 var derived = HD.derive("m/44'/20'/0'/0/0");
 
 var address = derived.privateKey.toAddress();
