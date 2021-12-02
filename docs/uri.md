@@ -1,4 +1,4 @@
-# Bitcoin URIs
+# DigiByte URIs
 
 Represents a DigiByte payment URI. DigiByte URI strings became the most popular way to share payment request, sometimes as a DigiByte link and others using a QR code.
 
