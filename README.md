@@ -29,6 +29,12 @@ You can find all the documentation [here](https://github.com/RenzoDD/digibyte-js
 - [Create a 2-of-3 multisig P2SH address](docs/examples.md#create-a-2-of-3-multisig-p2sh-address)
 - [Spend from a 2-of-2 multisig P2SH address](docs/examples.md#spend-from-a-2-of-2-multisig-p2sh-address)
 
+## Recent Changes 🧙
+
+Last modifications to the packages since v1.0.0
+
+- Added BIP39 support for Mnemonic phrases
+
 ## Development 🛠️
 
 ```sh
