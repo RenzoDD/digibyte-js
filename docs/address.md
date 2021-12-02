@@ -1,4 +1,4 @@
-# Bitcoin Address
+# DigiByte Address
 
 Represents a DigiByte address. Addresses are the most popular way to make DigiByte transactions.
 

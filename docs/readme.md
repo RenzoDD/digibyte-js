@@ -10,6 +10,7 @@ To get started, just type `npm install digibyte-js`.
 
 ### Addresses and Key Management
 
+- [BIP39 Mnemonic](mnemonic.md)
 - [Addresses](address.md)
 - [Using Different Networks](networks.md)
 - [Private Keys](privatekey.md) and [Public Keys](publickey.md)
@@ -18,7 +19,7 @@ To get started, just type `npm install digibyte-js`.
 ### Payment Handling
 
 - [Using Different Units](unit.md)
-- [Acknowledging and Requesting Payments: Bitcoin URIs](uri.md)
+- [Acknowledging and Requesting Payments: DigiByte URIs](uri.md)
 - [The Transaction Class](transaction.md)
 
 ### DigiByte Internals
