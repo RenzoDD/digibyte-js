@@ -29,5 +29,5 @@
     "test": "cls && node test.js",
     "build": "cls && browserify -r ./index.js:digibyte-js -o ./digibyte.js"
   },
-  "version": "1.1.1"
+  "version": "1.1.2"
 }
