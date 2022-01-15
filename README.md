@@ -29,6 +29,7 @@ You can find all the documentation [here](https://github.com/RenzoDD/digibyte-js
 - [Create an OP RETURN transaction](docs/examples.md#create-an-op-return-transaction)
 - [Create a 2-of-3 multisig P2SH address](docs/examples.md#create-a-2-of-3-multisig-p2sh-address)
 - [Spend from a 2-of-2 multisig P2SH address](docs/examples.md#spend-from-a-2-of-2-multisig-p2sh-address)
+- [Generate a DigiID login](docs/examples.md#digi-id-autentication)
 
 ## Recent Changes 🧙
 
@@ -38,6 +39,7 @@ Last modifications to the packages since v1.0.0
 - Fixed legacy `fromBTC() & toBTC()` methods in transaction
 - Added support for xprv, zprv and yprv private key serialization
 - Added support for xpub, zpub and ypub public key serialization
+- [Added support for DigiID](docs/autentication.md)
 
 ## Development 🛠️
 

@@ -138,3 +138,14 @@ var transaction = new digibyte.Transaction()
     .to('DBDtLkRegz1FGv9b7tXm5NFJr87p8kfMQb', 20000)
     .sign(privateKeys);
 ```
+
+## Digi-ID Autentication
+
+Following the [DigiID](https://www.digi-id.io/) protocol (from [BitID](https://github.com/bitid/bitid)) you can create a valid credentials to login a website:
+
+```javascript
+var digiid = new digibyte.DigiID('digiid://digiassetX.com/?x=a6326ba1330ffe2');
+var credentials = digiid.sign('xprv...');
+
+// Post credentials to digiid.callback uri 
+```
