@@ -29,5 +29,5 @@
     "test": "node test.js",
     "build": "browserify -r ./index.js:digibyte-js -o ./digibyte.js"
   },
-  "version": "1.2.0"
+  "version": "1.2.1"
 }
