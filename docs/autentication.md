@@ -12,10 +12,20 @@ var digiid = new DigiID('digiid://example.com/callback?x=f3399ac06522aba5');
 
 ## Create login credentials
 
-To create a valid credential you need a [mnemonic phrase](mnemonic.md), 'xprv' or instance of a [HDPrivateKey](hierarchical.md).
+To create a valid credential you need one of this objects:
+
+- [Mnemonic phrase](mnemonic.md).
+- Serialized Master Private Key (xprv...).
+- Instance of a [HDPrivateKey](hierarchical.md).
+- Instance of a [PrivateKey](privatekey.md).
+- Wallet Import Format private key (WIF).
 
 ```javascript
+var credentials = digiid.sign('brain symbol...');
 var credentials = digiid.sign('xprv...');
+var credentials = digiid.sign(hdPrivateKey);
+var credentials = digiid.sign(new PrivateKey());
+var credentials = digiid.sign('L2HL7PYi...');
 ```
 
 By default, it will use the index 0 to generate the credentials. To generate a diferent credential for the same website you must use a diferent index.
