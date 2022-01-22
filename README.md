@@ -33,13 +33,9 @@ You can find all the documentation [here](https://github.com/RenzoDD/digibyte-js
 
 ## Recent Changes 🧙
 
-Last modifications to the packages since v1.0.0
+Last modifications to the packages since v1.2.0
 
-- [Added BIP39 support for Mnemonic phrases](docs/mnemonic.md)
-- Fixed legacy `fromBTC() & toBTC()` methods in transaction
-- Added support for xprv, zprv and yprv private key serialization
-- Added support for xpub, zpub and ypub public key serialization
-- [Added support for DigiID](docs/autentication.md)
+- Sign Digi-ID with specific private key
 
 ## Development 🛠️
 
