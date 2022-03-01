@@ -36,6 +36,8 @@ You can find all the documentation [here](https://github.com/RenzoDD/digibyte-js
 Last modifications to the packages since v1.2.0
 
 - Sign Digi-ID with specific private key
+- Fixed Digi-ID bug on browser
+- Start transition from `native` addresses to new name `mulsig`.
 
 ## Development 🛠️
 
