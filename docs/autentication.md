@@ -39,6 +39,8 @@ var credentials = digiid.sign('xprv...', 3); // Index: 3
 
 Each index is a diferent identity.
 
+## Login credentials with DigiAssets
+
 You also can verify the ownership of a DigiAsset holding address providing the address and the private key as two extra arguments
 
 ```javascript
