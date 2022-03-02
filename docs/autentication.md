@@ -39,6 +39,22 @@ var credentials = digiid.sign('xprv...', 3); // Index: 3
 
 Each index is a diferent identity.
 
+You also can verify the ownership of a DigiAsset holding address providing the address and the private key as two extra arguments
+
+```javascript
+var credentials = digiid.sign(privateKey, 0, assetAddress, assetKey);
+/*
+If the url contains dual signature:
+{
+  uri: 'digiid://example.com/callback?x=f3399ac06522aba5',
+  address: 'DEQXfWcqahwP7wy7btwCAqdQrthrq65FtQ',
+  signature: 'H9OhuS2nD4...YlmDHmi4BasySY=',
+  assetaddress: 'DQXmzngdtbMLriaBKgrihqptigs7HqwaXu'
+  assetsignature: 'IKQdjm8iPfqbNpIz...TnIwS0cQuCo8dhgVRPifE='
+}
+*/
+```
+
 ## Verify credentials
 
 To verify a user credential you can use the static method `.verify()`.
