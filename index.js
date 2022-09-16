@@ -41,7 +41,7 @@ bitcore.util.preconditions = require('./lib/util/preconditions');
 // errors thrown by the library
 bitcore.errors = require('./lib/errors');
 
-// main bitcoin library
+// main DigiByte library
 bitcore.Address = require('./lib/address');
 bitcore.Block = require('./lib/block');
 bitcore.MerkleBlock = require('./lib/block/merkleblock');
@@ -58,7 +58,20 @@ bitcore.Transaction = require('./lib/transaction');
 bitcore.URI = require('./lib/uri');
 bitcore.Unit = require('./lib/unit');
 bitcore.BIP39 = require('./lib/bip39');
+
+// DigiID
 bitcore.DigiID = require('./lib/digiid');
+
+// DigiAssets
+bitcore.Lookup = require('./lib/digiassets/lookup');
+bitcore.Metadata = require('./lib/digiassets/metadata');
+bitcore.Rules = require('./lib/digiassets/rules');
+bitcore.AssetIssuer = require('./lib/digiassets/issuer');
+bitcore.AssetTransferor = require('./lib/digiassets/trasferor');
+
+// DigiByte extras
+bitcore.Explorer = require('./lib/explorer');
+bitcore.Price = require('./lib/price');
 
 // dependencies, subject to change
 bitcore.deps = {};
