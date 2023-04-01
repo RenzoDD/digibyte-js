@@ -31,6 +31,7 @@ bitcore.encoding.Base58Check = require('./lib/encoding/base58check');
 bitcore.encoding.BufferReader = require('./lib/encoding/bufferreader');
 bitcore.encoding.BufferWriter = require('./lib/encoding/bufferwriter');
 bitcore.encoding.Varint = require('./lib/encoding/varint');
+bitcore.encoding.Precision = require('./lib/encoding/precision');
 
 // utilities
 bitcore.util = {};
