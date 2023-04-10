@@ -37,7 +37,7 @@ var utxo = {
   "satoshis" : 50000
 };
 
-var transaction = new bitcore.Transaction()
+var transaction = new Transaction()
   .from(utxo)
   .to('DTcHjD2WnbgDyxdWitFzTLaUUr5oQD974C', 15000)
   .sign(privateKey);
@@ -72,7 +72,7 @@ var utxo = {
   "satoshis" : 50000
 };
 
-var transaction = new bitcore.Transaction()
+var transaction = new Transaction()
     .from(utxo)
     .addData('digibyte rocks') // Add OP_RETURN data
     .sign(privateKey);
@@ -98,7 +98,7 @@ var privateKeys = [
   new PrivateKey('91avARGdfge8E4tZfYLoxeJ5sGBdNJQH4kvjJoQFacbgwmaKkrx'),
   new PrivateKey('91avARGdfge8E4tZfYLoxeJ5sGBdNJQH4kvjJoQFacbgww7vXtT')
 ];
-var publicKeys = privateKeys.map(bitcore.PublicKey);
+var publicKeys = privateKeys.map(PublicKey);
 var address = new Address(publicKeys, 2); // 2 of 2
 
 var utxo = {
@@ -108,7 +108,7 @@ var utxo = {
   "satoshis" : 20000
 };
 
-var transaction = new bitcore.Transaction()
+var transaction = new Transaction()
     .from(utxo, publicKeys, 2)
     .to('DTcHjD2WnbgDyxdWitFzTLaUUr5oQD974C', 20000)
     .sign(privateKeys);

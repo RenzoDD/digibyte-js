@@ -8,11 +8,11 @@ The `digibyte.crypto.Random` namespace contains a single function, named `getRan
 
 ## BN
 
-The `digibyte.crypto.BN` class contains a wrapper around [bn.js](https://github.com/indutny/bn.js), the bignum library used internally in bitcore.
+The `digibyte.crypto.BN` class contains a wrapper around [bn.js](https://github.com/indutny/bn.js), the bignum library used internally in digibyte-js.
 
 ## Point
 
-The `digibyte.crypto.Point` class contains a wrapper around the class Point of [elliptic.js](https://github.com/indutny/elliptic), the elliptic curve library used internally in bitcore.
+The `digibyte.crypto.Point` class contains a wrapper around the class Point of [elliptic.js](https://github.com/indutny/elliptic), the elliptic curve library used internally in digibyte-js.
 
 ## Hash
 

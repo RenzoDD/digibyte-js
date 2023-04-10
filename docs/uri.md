@@ -12,7 +12,7 @@ digibyte:DTcHjD2WnbgDyxdWitFzTLaUUr5oQD974C?amount=1.2&message=Payment&label=Sat
 
 ## URI Validation
 
-The main use that we expect you'll have for the `URI` class in bitcore is validating and parsing digibyte URIs. A `URI` instance exposes the address as a DigiByteJS `Address` object and the amount in Satoshis, if present.
+The main use that we expect you'll have for the `URI` class in digibyte-js is validating and parsing digibyte URIs. A `URI` instance exposes the address as a DigiByteJS `Address` object and the amount in Satoshis, if present.
 
 The code for validating URIs looks like this:
 
