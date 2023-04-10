@@ -37,7 +37,8 @@ Last modifications to the packages since v1.2.0
 
 - Sign Digi-ID with specific private key
 - Fixed Digi-ID bug on browser
-- Start transition from `native` addresses to new name `mulsig`.
+- Start transition from `native` addresses to new name `mulsig` or `script`.
+- DigiID `variables` attribute changed to `params`
 
 ## Development 🛠️
 
