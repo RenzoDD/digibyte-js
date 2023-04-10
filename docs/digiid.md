@@ -1,10 +1,10 @@
 # Digi-ID Autentication
 
-Represent an instance of a Digi-ID login request and generate a valid response object.
+Represent an instance of a Digi-ID login request and can generate a valid response object.
 
 ## Create a Digi-ID instance
 
-To create an instance you need the Digi-ID connection string usually provided as a qr code in the website the user wants to login.
+To create an instance you need the Digi-ID connection string, it is usually provided as a QR code in the website/application the user wants to login.
 
 ```javascript
 var digiid = new DigiID('digiid://example.com/callback?x=f3399ac06522aba5');
@@ -14,21 +14,23 @@ var digiid = new DigiID('digiid://example.com/callback?x=f3399ac06522aba5');
 
 To create a valid credential you need one of this objects:
 
-- [Mnemonic phrase](mnemonic.md).
+- A [Mnemonic phrase](mnemonic.md).
 - Serialized Master Private Key (xprv...).
 - Instance of a [HDPrivateKey](hierarchical.md).
-- Instance of a [PrivateKey](privatekey.md).
 - Wallet Import Format private key (WIF).
+- Instance of a [PrivateKey](privatekey.md).
 
 ```javascript
 var credentials = digiid.sign('brain symbol...');
 var credentials = digiid.sign('xprv...');
 var credentials = digiid.sign(hdPrivateKey);
-var credentials = digiid.sign(new PrivateKey());
 var credentials = digiid.sign('L2HL7PYi...');
+var credentials = digiid.sign(new PrivateKey());
 ```
 
-By default, it will use the index 0 to generate the credentials. To generate a diferent credential for the same website you must use a diferent index.
+If you use a mnemonic phrase, xprv or HDPrivateKey by default the library will compute the correct devibation path based on the domain provided on the URI. If a WIF or a PrivateKey is provided the object will sign directly with the secret.
+
+By default, the instance will use the index 0 to generate the credentials. To generate a diferent credential for the same website you must use a diferent index.
 
 ```javascript
 var credentials = digiid.sign('xprv...');    // Index: 0

@@ -9,7 +9,7 @@
 
 ## Parameters
 
-The constructor is quite permissive with the input arguments. It can take outputs straight out of blockbook's api. Some of the names are not very informative for new users, so the UnspentOutput constructor also understands these aliases:
+The constructor is quite permissive with the input arguments. It can take outputs straight out of digibyted's getunspent RPC call. Some of the names are not very informative for new users, so the UnspentOutput constructor also understands these aliases:
 
 - `scriptPubKey`: just `script` is also accepted
 - `amount`: expected value in DGB. If the `satoshis` alias is used, make sure to use satoshis instead of DGB.
@@ -22,15 +22,15 @@ The constructor is quite permissive with the input arguments. It can take output
 var utxo = new UnspentOutput({
   "txid" : "a0a08e397203df68392ee95b3f08b0b3b3e2401410a38d46ae0874f74846f2e9",
   "vout" : 0,
-  "address" : "DDeYWb8rCQ5gVxtMVn2HyaQL86c3stcpBF",
-  "scriptPubKey" : "76a9145d52bfb470a2750da376c18bd3744653a5442ef688ac",
+  "address" : "mgJT8iegL4f9NCgQFeFyfvnSw1Yj4M5Woi",
+  "scriptPubKey" : "76a914089acaba6af8b2b4fb4bed3b747ab1e4e60b496588ac",
   "amount" : 0.00070000
 });
 var utxo = new UnspentOutput({
   "txId" : "a0a08e397203df68392ee95b3f08b0b3b3e2401410a38d46ae0874f74846f2e9",
   "outputIndex" : 0,
-  "address" : "DDeYWb8rCQ5gVxtMVn2HyaQL86c3stcpBF",
-  "script" : "76a9145d52bfb470a2750da376c18bd3744653a5442ef688ac",
+  "address" : "mgJT8iegL4f9NCgQFeFyfvnSw1Yj4M5Woi",
+  "script" : "76a914089acaba6af8b2b4fb4bed3b747ab1e4e60b496588ac",
   "satoshis" : 70000
 });
 ```

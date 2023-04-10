@@ -1,52 +1,48 @@
-# BIP39 Mnemonic
+# Mnemonic
 
-Utility class to generate, check and convert to a private key's seed a BIP39 mnemonic phrases.
+The `Mnemonic` class provides an implementation of a mnemonic code or mnemonic sentence – a group of easy to remember words – for the generation of deterministic keys. The class handles code generation and its later conversion to a [HDPrivateKey](hierarchical.md). See [the official BIP-0039](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) for technical background information.
 
-## Generate a BIP39 mnemonic
+## Mnemonic generation
 
-You don't neet to instanciate the `BIP39` class to use its methods.
+For creating a new random mnemonic code you just create a new instance.
 
 ```javascript
-// Generate 12-words mnemonic
-var mnemonic = BIP39.CreateMnemonic();
-var mnemonic = BIP39.CreateMnemonic(12);
+var code = new Mnemonic();
 
-// Generate other word-lengths
-var mnemonic15 = BIP39.CreateMnemonic(15);
-var mnemonic18 = BIP39.CreateMnemonic(18);
-var mnemonic24 = BIP39.CreateMnemonic(24);
-
-// Less common word-lengths (not recommended)
-var mnemonic3 = BIP39.CreateMnemonic(3);
-var mnemonic6 = BIP39.CreateMnemonic(6);
-var mnemonic9 = BIP39.CreateMnemonic(9);
+code.toString(); // 'select scout crash enforce riot rival spring whale hollow radar rule sentence'
 ```
 
-## Check a mnemonic
+## Multi-language support
 
-Evaluate a string and returns `true` if its a valid BIP39 mnemonic if not, it will return `false`.
+The `Mnemonic` class can use any list of 2048 unique words to generate the mnemonic code. For convenience the class provides default word lists for the following languages: English (default), Chinese, French, Japanese and Spanish. Those word list are published under `Mnemonic.Words.LANGUAGE`, take a look at the following example:
 
 ```javascript
-var mnemonic = 'hockey lumber soda negative link evolve pole retreat sponsor voice hurt feature';
+var code = new Mnemonic(Mnemonic.Words.SPANISH);
+code.toString(); // natal hada sutil año sólido papel jamón combate aula flota ver esfera...
 
-if (BIP39.CheckMnemonic(mnemonic)) {
-    // TODO
-}
+var myWordList = [ 'abandon', 'ability', 'able', 'about', 'above', ... ];
+var customCode = new Mnemonic(myWordList);
 ```
 
-## Convert mnemonic to seed
+## Validating a mnemonic
 
-To generate private keys and addresses from a mnemonic is necessary convert it first to a master seed.
+The Mnemonic class provides a static method to check if a mnemonic string is valid. If you generated the mnemonic code using any of the default word list, the class will identify it, otherwise you must provide the word list used.
 
 ```javascript
-var mnemonic = 'hockey lumber soda negative link evolve pole retreat sponsor voice hurt feature';
+var code = 'select scout crash enforce riot rival spring whale hollow radar rule sentence';
+var valid = Mnemonic.isValid(code);
 
-var seed = BIP39.MnemonicToSeed(mnemonic);
+// using a custom word list
+var validCutom = Mnemonic.isValid(code, customWordlist);
+```
 
-// Then folow the BIP32 Hierarchical Deterministic Wallet 
-var HD = HDPrivateKey.fromSeed(seed);
-var derived = HD.derive("m/44'/20'/0'/0/0");
+## Generating a private key
 
-var address = derived.privateKey.toAddress();
-// DJPa3v2MZTGy19e3QmnbkxdML1Y4nNy1eQ
+A mnemonic encodes entropy that can be used for creating a seed and later a [HDPrivateKey](hierarchical.md). During the seed generation process a passphrase can be used. The code for doing so looks like this:
+
+```javascript
+var code = new Mnemonic('select scout crash enforce riot rival spring whale hollow radar rule sentence');
+
+var xpriv1 = code.toHDPrivateKey(); // no passphrase
+var xpriv2 = code.toHDPrivateKey('my passphrase'); // using a passphrase
 ```
