@@ -2,19 +2,6 @@
 
 var bitcore = module.exports;
 
-// module information
-bitcore.version = 'v' + require('./package.json').version;
-bitcore.versionGuard = function(version) {
-  if (version !== undefined) {
-    var message = 'More than one instance of bitcore-lib found. ' +
-      'Please make sure to require bitcore-lib and check that submodules do' +
-      ' not also include their own bitcore-lib dependency.';
-    throw new Error(message);
-  }
-};
-bitcore.versionGuard(global._bitcore);
-global._bitcore = bitcore.version;
-
 // crypto
 bitcore.crypto = {};
 bitcore.crypto.BN = require('./lib/crypto/bn');
@@ -31,7 +18,6 @@ bitcore.encoding.Base58Check = require('./lib/encoding/base58check');
 bitcore.encoding.BufferReader = require('./lib/encoding/bufferreader');
 bitcore.encoding.BufferWriter = require('./lib/encoding/bufferwriter');
 bitcore.encoding.Varint = require('./lib/encoding/varint');
-bitcore.encoding.Precision = require('./lib/encoding/precision');
 
 // utilities
 bitcore.util = {};
@@ -42,7 +28,7 @@ bitcore.util.preconditions = require('./lib/util/preconditions');
 // errors thrown by the library
 bitcore.errors = require('./lib/errors');
 
-// main DigiByte library
+// main digibyte library
 bitcore.Address = require('./lib/address');
 bitcore.Block = require('./lib/block');
 bitcore.MerkleBlock = require('./lib/block/merkleblock');
@@ -58,21 +44,9 @@ bitcore.Script = require('./lib/script');
 bitcore.Transaction = require('./lib/transaction');
 bitcore.URI = require('./lib/uri');
 bitcore.Unit = require('./lib/unit');
-bitcore.BIP39 = require('./lib/bip39');
 
-// DigiID
-bitcore.DigiID = require('./lib/digiid');
-
-// DigiAssets
-bitcore.Lookup = require('./lib/digiassets/lookup');
-bitcore.Metadata = require('./lib/digiassets/metadata');
-bitcore.Rules = require('./lib/digiassets/rules');
-bitcore.AssetIssuer = require('./lib/digiassets/issuer');
-bitcore.AssetTransferor = require('./lib/digiassets/trasferor');
-
-// DigiByte extras
-bitcore.Explorer = require('./lib/explorer');
-bitcore.Price = require('./lib/price');
+// mnemonic
+bitcore.Mnemonic = require('./lib/mnemonic');
 
 // dependencies, subject to change
 bitcore.deps = {};
