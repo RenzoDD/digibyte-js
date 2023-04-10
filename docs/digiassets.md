@@ -71,14 +71,57 @@ var issuer = new AssetIssuer(metadata, rules)
         scriptPubKey: "76a9147199f587502d5b40506d54eb3dca6a318e2f894488ac"
     })
     .addOutput("DFVmLCbkCC9SC7XFA3SUuG3L5fdCbRNAyY", 2100000) // 2100000 units = 21000.00 assets
-    .setStorage(21209 + 362, price) // Sum of all data to be storage
+    .setStorage(21209 + 362, price) // Sum of all data  () <´pñlk to be storage
     .setGasChange("DFVmLCbkCC9SC7XFA3SUuG3L5fdCbRNAyY")
     .sign("L2aGUHURYodaXaq7cZ8mzmrAipkSk8ESCeqjQzS7oNC2jT7pwFph")
     .build();
 ```
 Broadcast `issuer.raw` hex data.
-```
-TXID: 70e80c711707debc4502d3b75c8a85f2160a3185a06e47d1e0b7f2e988470afd
-```
 
 ## Transfer
+To transfer a DigiAsset you must have the set of rules of the asset and a `Price` object if it includes royalties. DigiAsset UTXOs must include 3 extra fields `assetId`, `metadata` and `quantity`.
+
+The output quantity is for the amount of DigiAssets to sent and the asset change and is the address that will receive the assets that are not expressly sent to an output. There is not 'asset fee' to miners.
+
+```javascript
+var transferor = new AssetTransferor(rules, price)
+    .addInput([
+        {
+            txid: "a455ad28bf3b1f4b1881f1241c7fd4f144f8612a7e34d78a912a28e25619775b",
+            vout: 0,
+            satoshis: 10000000000,
+            scriptPubKey: "76a9147199f587502d5b40506d54eb3dca6a318e2f894488ac"
+        },
+        {
+            txid: "ec5c8b19042d9c4a0217177a611319c3e2c916819f8d2d348560378e9a2605f3",
+            vout: 4,
+            satoshis: 600,
+            scriptPubKey: "76a9147199f587502d5b40506d54eb3dca6a318e2f894488ac",
+            assetId: "La4fitT5brhBz9yNwwLZXSEzWAeAq7va5ZA67X",
+            metadata: "bafkreibs7stfn7nw7k33u2uftzkexhgu63x5666k3pf3udckq3iikg2ohe",
+            quantity: 500
+        }
+    ])
+    .addOutput("DJMr8HZsEX26qcuWCUYt4obxk7Bir2JqH8", 200)
+    .setAssetChange("DSxnD3oz5Do915NCdf8b6hbbzGCAcHCYSK")
+    .setGasChange("DSxnD3oz5Do915NCdf8b6hbbzGCAcHCYSK")
+    .sign("Kx5L1AimMP8TYoje5AZmq9UisaHMaTE1ZqNA8PPcKYuQB7oSusU9")
+    .build();
+```
+Broadcast `issuer.raw` hex data.
+
+## Asset Data
+DigiAssetX maintain an AWS S3 bucket with the DigiByte blockchain data parsed including DigiAssets. To access this data you need either an AWS keys or a provider.
+
+
+```javascript
+var lookup = new AssetLookup()
+    .setKeys(accessKeyId, secretAccessKey);
+    //.setProvider("https://digiassets.info/api", secretKey)
+
+var height = await lookup.height();
+var address = await lookup.address("DSxnD3oz5Do915NCdf8b6hbbzGCAcHCYSK");
+var asset = await lookup.asset("La4fitT5brhBz9yNwwLZXSEzWAeAq7va5ZA67X");
+var rules = await lookup.rules("La4fitT5brhBz9yNwwLZXSEzWAeAq7va5ZA67X");
+var tx = await lookup.tx("a455ad28bf3b1f4b1881f1241c7fd4f144f8612a7e34d78a912a28e25619775b");
+```

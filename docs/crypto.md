@@ -4,7 +4,7 @@ The cryptographic primitives (ECDSA and HMAC) implementations in this package ha
 
 ## Random
 
-The `digibyte.crypto.Random` namespace contains a single function, named `getRandomBuffer(size)` that returns a `Buffer` instance with random bytes. It may not work depending on the engine that bitcore is running on (doesn't work with IE versions lesser than 11).
+The `digibyte.crypto.Random` namespace contains a single function, named `getRandomBuffer(size)` that returns a `Buffer` instance with random bytes. It may not work depending on the engine that digibyte-js is running on (doesn't work with IE versions lesser than 11).
 
 ## BN
 

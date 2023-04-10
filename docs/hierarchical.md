@@ -17,18 +17,16 @@ var digibyte = require('digibyte-js');
 var HDPrivateKey = digibyte.HDPrivateKey;
 
 var hdPrivateKey = new HDPrivateKey();
-var derivedByNumber = hdPrivateKey.derive(1, true).derive(2);
-var derivedByArgument = hdPrivateKey.derive("m/1'/2");
+var retrieved = new HDPrivateKey('xpriv...');
+var derived = hdPrivateKey.derive("m/0'"); // see deprecation warning for derive
+var derivedByNumber = hdPrivateKey.derive(1).derive(2, true);
+var derivedByArgument = hdPrivateKey.derive("m/1/2'");
+assert(derivedByNumber.xprivkey === derivedByArgument.xprivkey);
+
+var address = derived.privateKey.toAddress();
 
 // obtain HDPublicKey
 var hdPublicKey = hdPrivateKey.hdPublicKey;
-
-// retrive Root Key
-var retrieved = new HDPrivateKey('xpriv...');
-var derived = retrieved.derive("m/1'/0");
-
-// obtain address
-var address = derived.privateKey.toAddress();
 ```
 
 ## HDPublicKey
@@ -38,11 +36,14 @@ An instance of a PublicKey that can be derived to build extended public keys. No
 ```javascript
 var hdPrivateKey = new HDPrivateKey();
 var hdPublicKey = hdPrivateKey.hdPublicKey;
-var address = new Address(hdPublicKey.publicKey);
-var derivedAddress = new Address(hdPublicKey.derive(10).derive(55).publicKey);
+try {
+  new HDPublicKey();
+} catch(e) {
+  console.log("Can't generate a public key without a private key");
+}
 
-var retrieved = new HDPublicKey('xpub...');
-var derived = retrieved.derive("m/10/55");
+var address = new Address(hdPublicKey.publicKey);
+var derivedAddress = new Address(hdPublicKey.derive(100).publicKey); // see deprecation warning for derive
 ```
 
 ## Deprecation Warning for `HDPublicKey.derive()` and `HDPrivateKey.derive()`

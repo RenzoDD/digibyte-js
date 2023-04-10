@@ -18,9 +18,9 @@ To understand the need of using the `Unit` class when dealing with unit conversi
 The supported units are DGB, mDGB, bits (micro DGBs, uDGB) and satoshis. The codes for each unit can be found as members of the Unit class.
 
 ```javascript
-var dgbCode = Unit.DGB;
-var mdgbCode = Unit.mDGB;
-var udgbCode = Unit.uDGB;
+var DGBCode = Unit.DGB;
+var mDGBCode = Unit.mDGB;
+var uDGBCode = Unit.uDGB;
 var bitsCode = Unit.bits;
 var satsCode = Unit.satoshis;
 ```
