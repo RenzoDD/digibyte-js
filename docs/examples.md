@@ -52,7 +52,7 @@ var message = new Message('This is an example of a signed message.');
 var signature = message.sign(privateKey);
 ```
 
-## Verify a Bitcoin message
+## Verify a DigiByte message
 
 ```javascript
 var address = 'DTcHjD2WnbgDyxdWitFzTLaUUr5oQD974C';
