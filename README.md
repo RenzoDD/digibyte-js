@@ -21,7 +21,6 @@ You can find all the documentation [here](https://github.com/RenzoDD/digibyte-js
 
 - [Generate a random address](docs/examples.md#generate-a-random-address)
 - [Generate a address from a SHA256 hash](docs/examples.md#generate-a-address-from-a-sha256-hash)
-- [Generate a random mnemonic](docs/examples.md#generate-address-from-mnemonic)
 - [Import an address via WIF](docs/examples.md#import-an-address-via-wif)
 - [Create a Transaction](docs/examples.md#create-a-transaction)
 - [Sign a DigiByte message](docs/examples.md#sign-a-digibyte-message)
@@ -29,16 +28,6 @@ You can find all the documentation [here](https://github.com/RenzoDD/digibyte-js
 - [Create an OP RETURN transaction](docs/examples.md#create-an-op-return-transaction)
 - [Create a 2-of-3 multisig P2SH address](docs/examples.md#create-a-2-of-3-multisig-p2sh-address)
 - [Spend from a 2-of-2 multisig P2SH address](docs/examples.md#spend-from-a-2-of-2-multisig-p2sh-address)
-- [Generate a DigiID login](docs/examples.md#digi-id-autentication)
-
-## Recent Changes 🧙
-
-Last modifications to the packages since v1.2.0
-
-- Sign Digi-ID with specific private key
-- Fixed Digi-ID bug on browser
-- Start transition from `native` addresses to new name `mulsig` or `script`.
-- DigiID `variables` attribute changed to `params`
 
 ## Development 🛠️
 
@@ -70,12 +59,7 @@ If you find any flaw or trouble please submit a new thread on [Github Issues](ht
 
 ## Donate 💰
 
-[![Bitcoin - 15uUy4DVhD15Fi5oSS92cQwn5dJUpod1i9](https://img.shields.io/badge/Bitcoin--blue?style=social&logo=bitcoin)](https://bitcoinblockexplorers.com/address/15uUy4DVhD15Fi5oSS92cQwn5dJUpod1i9)
-[![Litecoin - LddizHXyCtqHAbwP4dMpQoH5G8kVm2Jx4Y](https://img.shields.io/badge/Litecoin--blue?style=social&logo=litecoin)](https://litecoinblockexplorer.net/address/LddizHXyCtqHAbwP4dMpQoH5G8kVm2Jx4Y)
-[![Bitcoin Cash - bitcoincash:qplt3dd2hgg0sj8v4zte9unmvk79nadlkc59vgkgq2](https://img.shields.io/badge/Bitcoin%20Cash--blue?style=social&logo=bitcoincash)](https://bchblockexplorer.com/address/bitcoincash:qplt3dd2hgg0sj8v4zte9unmvk79nadlkc59vgkgq2)
-[![Dogecoin - DGZXxRAC57vxs4nnPHD5APbNgpY3LbKS2p](https://img.shields.io/badge/Dogecoin--blue?style=social&logo=dogecoin)](https://dogeblocks.com/address/DGZXxRAC57vxs4nnPHD5APbNgpY3LbKS2p)
-[![Dash - XyJLBuWEkkEeDVUquP6iViw47xAECPapLQ](https://img.shields.io/badge/Dash--blue?style=social&logo=dash)](https://dashblockexplorer.com/address/XyJLBuWEkkEeDVUquP6iViw47xAECPapLQ)
-[![DigiByte - DCxo6SCKMdyoUpyYydqG3prC3e4NNCy5nG](https://img.shields.io/badge/DigiByte--blue?style=social&logo=bitcoinsv)](https://digibyteblockexplorer.com/address/DCxo6SCKMdyoUpyYydqG3prC3e4NNCy5nG)
+DigiByte: D6zEnE3roe234dsK4Y8sqparzUnwRcJhmR
 
 ## Developers ✒️
 
@@ -85,4 +69,4 @@ If you find any flaw or trouble please submit a new thread on [Github Issues](ht
 
 ## License 📄
 
-Code released under the [MIT License](./LICENSE).
+Code released under the [MIT License](./LICENSE.md).
