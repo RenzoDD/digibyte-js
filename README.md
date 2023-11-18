@@ -59,7 +59,7 @@ If you find any flaw or trouble please submit a new thread on [Github Issues](ht
 
 ## Donate 💰
 
-DigiByte: D6zEnE3roe234dsK4Y8sqparzUnwRcJhmR
+DigiByte: DDiazXQ3bd9dnsRZ9HJRxs9T9idpgaKYs7
 
 ## Developers ✒️
 
