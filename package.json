@@ -1,5 +1,5 @@
 {
-  "version": "2.2.6",
+  "version": "2.2.7",
   "name": "digibyte-js",
   "main": "index.js",
   "description": "A pure and powerful JavaScript DigiByte library.",
