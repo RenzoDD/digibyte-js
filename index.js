@@ -64,6 +64,7 @@ digibyte.RPC = require('./lib/rpc');
 // digibyte extra
 digibyte.Price = require('./lib/price');
 digibyte.Blockbook = require('./lib/blockbook');
+digibyte.DigiByteDomain = require('./lib/domain');
 
 // dependencies, subject to change
 digibyte.deps = {};
