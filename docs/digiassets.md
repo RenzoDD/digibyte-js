@@ -109,19 +109,3 @@ var transferor = new AssetTransferor(rules, price)
     .build();
 ```
 Broadcast `issuer.raw` hex data.
-
-## Asset Data
-DigiAssetX maintain an AWS S3 bucket with the DigiByte blockchain data parsed including DigiAssets. To access this data you need either an AWS keys or a provider.
-
-
-```javascript
-var lookup = new AssetLookup()
-    .setKeys(accessKeyId, secretAccessKey);
-    //.setProvider("https://digiassets.info/api", secretKey)
-
-var height = await lookup.height();
-var address = await lookup.address("DSxnD3oz5Do915NCdf8b6hbbzGCAcHCYSK");
-var asset = await lookup.asset("La4fitT5brhBz9yNwwLZXSEzWAeAq7va5ZA67X");
-var rules = await lookup.rules("La4fitT5brhBz9yNwwLZXSEzWAeAq7va5ZA67X");
-var tx = await lookup.tx("a455ad28bf3b1f4b1881f1241c7fd4f144f8612a7e34d78a912a28e25619775b");
-```
