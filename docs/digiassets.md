@@ -10,15 +10,15 @@
 
 Learn more at [DigiByte.org](https://digibyte.org/#digiassets)
 
-## Create asset MetaData
+## Create asset Metadata
 
 The DigiAsset v3 protocol encourages the use of IPFS to upload the metadata and binaries attached to an asset. Be aware to save the CID and the size of the binaries for future steps. 
 
-Use the `MetaData` class to create the DigiAsset metadata. Then, upload the stringlify version of the object as a raw string to IPFS. Be aware that the metadata needs to calculate the AssetId previously. For locked assets a UTXO in the format `txid:vout` must be hashed to generate the ID and for unlocked asset the `address`.
+Use the `Metadata` class to create the DigiAsset metadata. Then, upload the stringlify version of the object as a raw string to IPFS. Be aware that the metadata needs to calculate the AssetId previously. For locked assets a UTXO in the format `txid:vout` must be hashed to generate the ID and for unlocked asset the `address`.
 
 
 ```javascript
-var metadata = new MetaData()
+var metadata = new Metadata()
     .name("DuckCoin")
     .description("DuckCoin is a limited-edition token issued on top of the DigiByte blockchain.")
     .addUrl("icon", "ipfs://QmPeYB1noLwNuqaH5oyFgoo5EVNHBhW8F5e581tF66gGNg", "image/png")
@@ -60,7 +60,7 @@ var price = new Price("fiat", "a0e2fe84fb6ffb418072a72af61302428aa0dffaa42502422
 
 To issue a DigiAsset be aware that the output amount is expressed in the minimun divisible units. 
 
-The DigiByte v3 protocol has a distributed storage powered by IPFS and DigiAssetX. The nodes are pre-configured to store all the assets metadata but, to ensure that a node will store your asset MetaData, DigiAssetX has create a payment system where you can pay 1.20 USD per MegaByte of data.
+The DigiByte v3 protocol has a distributed storage powered by IPFS and DigiAssetX. The nodes are pre-configured to store all the assets metadata but, to ensure that a node will store your asset Metadata, DigiAssetX has create a payment system where you can pay 1.20 USD per MegaByte of data.
 
 ```javascript
 var issuer = new AssetIssuer(metadata, rules)

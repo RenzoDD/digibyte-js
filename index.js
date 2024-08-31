@@ -54,7 +54,7 @@ digibyte.Unit = require('./lib/unit');
 digibyte.DigiID = require('./lib/digiid');
 digibyte.AssetIssuer = require('./lib/digiasset/issuer');
 digibyte.AssetTransferor = require('./lib/digiasset/trasferor');
-digibyte.MetaData = require('./lib/digiasset/metadata');
+digibyte.Metadata = require('./lib/digiasset/metadata');
 digibyte.Rules = require('./lib/digiasset/rules');
 digibyte.Vote = require('./lib/digiasset/vote');
 
